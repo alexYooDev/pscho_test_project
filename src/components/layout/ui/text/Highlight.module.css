@@ -1,0 +1,13 @@
+.highlight {
+  color: wheat;
+  font-weight: bold;
+  word-break: keep-all;
+}
+
+.label {
+  color: wheat;
+  font-weight: bold;
+  word-break: keep-all;
+  padding-bottom: 5px;
+}
+

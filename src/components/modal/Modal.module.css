@@ -1,0 +1,35 @@
+.btnConfirm {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: wheat;
+  color: black;
+  border: 1px solid #800040;
+  margin: 0 1rem;
+}
+
+.btnConfirm:hover {
+  background-color: beige;
+  transition: ease-in-out 200ms;
+}
+
+.modal {
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 30rem;
+  z-index: 10;
+  position: fixed;
+  top: 20vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal p {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+

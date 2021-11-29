@@ -1,0 +1,7 @@
+main {
+  background-color: #111617;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+}

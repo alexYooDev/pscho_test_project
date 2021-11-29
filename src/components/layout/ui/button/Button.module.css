@@ -1,0 +1,136 @@
+.btn {
+  font: inherit;
+  border: 1px solid #0d2d31;
+  background-color: #025b66;
+  color: #101d20;
+  font-weight: bold;
+  padding: 0.75rem 3.5rem;
+  cursor: pointer;
+  font-size: 1.05rem;
+  border-radius: 7px;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.btnResult {
+  font: inherit;
+  border: 1px solid #0d2d31;
+  background-color: #025b66;
+  color: #101d20;
+  font-weight: bold;
+  padding: 0.75rem 3.5rem;
+  cursor: pointer;
+  font-size: 1.05rem;
+  border-radius: 7px;
+  justify-content: space-between;
+  width: 35%;
+  margin-bottom: 1.25rem;
+  margin-left: 30%;
+  margin-right: 35%;
+}
+
+.btnTestEnd {
+  font: inherit;
+  border: 1px solid #0d2d31;
+  background-color: #025b66;
+  color: #101d20;
+  font-weight: bold;
+  padding: 0.75rem 3.5rem;
+  cursor: pointer;
+  font-size: 1.05rem;
+  border-radius: 7px;
+  justify-content: space-between;
+  width: 35%;
+  margin-bottom: 1.25rem;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.invisible {
+  opacity: 1;
+}
+
+.radioBtn input[type="radio"] {
+  display: none;
+}
+
+.radioBtn input[type="radio"] + span {
+  display: inline-block;
+  font: inherit;
+  color: #2e8489;
+  padding: 1.2rem 0;
+  cursor: pointer;
+  font-size: 1.05rem;
+  border-radius: 5px;
+  justify-content: space-between;
+  width: 85%;
+  word-break: keep-all;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.radioBtn input[type="radio"]:checked + span {
+  transition: ease-in 100ms;
+   background-color: #0d2d31;
+   border-color: wheat;
+   color:darkgray;
+}
+
+.label {
+  display: inline-block;
+  font: inherit;
+  color: #2e8489;
+  padding: 1.2rem 0;
+  cursor: pointer;
+  font-size: 1.05rem;
+  border-radius: 5px;
+  justify-content: space-between;
+  width: 85%;
+  word-break: keep-all
+}
+
+.btnPrev,
+.btnNext {
+  font: inherit;
+  color: #0c3940;
+  background-color: #025b66;
+  padding: 0.75rem 3.5rem;
+  cursor: pointer;
+  font-size: 1.05rem;
+  border-radius: 7px;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+  width: 150px;
+  justify-content: space-between;
+ }
+ 
+ .btn:hover,
+ .btnResult:hover,
+ .btnTestEnd:hover,
+ .label:hover,
+ .btnPrev:hover,
+ .btnNext:hover,
+ .btn:active {
+   transition: ease-in 100ms;
+   background-color: #0d2d31;
+   border-color: wheat;
+   color:darkgray;
+ }
+
+ .btn:focus {
+   outline: none;
+ }
+
+ .btnAnswer:checked {
+  background-color:tan;
+ }
+ 
+ button:disabled,
+ button:focus:disabled,
+ button:hover:disabled,
+ button:active:disabled {
+   background-color: #595959;
+   border-color: slategray;
+   color: ghostwhite;
+   cursor: not-allowed;
+ }

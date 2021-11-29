@@ -1,0 +1,22 @@
+.myProgress {
+  position:relative;
+  height: 30px;
+  background-color: plum;
+  border-radius: 8px;
+}
+
+.myBar{
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: palevioletred;
+  transition: ease-in-out 400ms;
+  border-radius: 8px;
+}
+
+.label {
+  font-weight: bold; 
+  text-align: right; 
+  line-height: 30px;
+  color: white;
+}
