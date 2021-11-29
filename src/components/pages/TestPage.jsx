@@ -13,7 +13,7 @@ import Card from "../layout/ui/card/Card";
 import ModalContext from "../store/modal-ctx";
 import TestContext from "../store/test-ctx";
 
-import cardClasses from '../layout/ui/card/Card.module.css';
+import cardClasses from "../layout/ui/card/Card.module.css";
 import footerClasses from "../layout/ui/footer/Footer.module.css";
 import btnClasses from "../layout/ui/button/Button.module.css";
 
@@ -31,11 +31,11 @@ const TestPage = () => {
   const handleToPrevPage = () => {
     ctx.onSetCurPage(ctx.curPage - 1);
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+  };
 
   let checkedArr = Object.entries(ctx.checked);
   let checkedLength = checkedArr.length;
-  let itemCount = ctx.curPage < 6 ? ctx.curPage*5 : ctx.curPage+22;
+  let itemCount = ctx.curPage < 6 ? ctx.curPage * 5 : ctx.curPage + 22;
   let enableNext = checkedLength >= itemCount;
 
   const lastIdx = ctx.curPage * ctx.itemsPerPage;
@@ -48,22 +48,21 @@ const TestPage = () => {
   }
 
   const handleSubmit = (e) => {
-    ctx.onSetNow((prev)=>{
-      return prev + 1
-    })
+    ctx.onSetNow((prev) => {
+      return prev + 1;
+    });
     ctx.onSetCurPage(ctx.curPage + 1);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleComplete = () => {
-      history.push('/test-end');
-      ctx.onSetAList(ctx.checked);
-  }
+    history.push("/test-end");
+    ctx.onSetAList(ctx.checked);
+  };
 
-
-  useEffect(()=>{
-    setCount(Object.keys(ctx.checked).length+1);
-  },[ctx.checked])
+  useEffect(() => {
+    setCount(Object.keys(ctx.checked).length + 1);
+  }, [ctx.checked]);
 
   if (ctx.data.length === 0) {
     return <Loading />;
@@ -73,26 +72,31 @@ const TestPage = () => {
     <Card className={cardClasses.testWrapper}>
       <ProgressBar />
       <Header>각 {ctx.data[0].question}</Header>
-      <Test items={curItems(ctx.data)} count={count}/>
+      <Test items={curItems(ctx.data)} count={count} />
       <Footer className={footerClasses.footer}>
         {ctx.curPage === 1 ? (
           <button className={btnClasses.btnPrev} onClick={handleToExample}>
             <span>뒤로</span>
           </button>
         ) : (
-          <button
-            className={btnClasses.btnPrev}
-            onClick={handleToPrevPage}
-          >
+          <button className={btnClasses.btnPrev} onClick={handleToPrevPage}>
             <span>이전</span>
           </button>
         )}
         {ctx.curPage === 6 ? (
-          <button className={btnClasses.btnNext} onClick={handleComplete} disabled={!enableNext}>
+          <button
+            className={btnClasses.btnNext}
+            onClick={handleComplete}
+            disabled={!enableNext}
+          >
             <span>종료</span>
           </button>
         ) : (
-          <button className={btnClasses.btnNext} onClick={handleSubmit} disabled={!enableNext}>
+          <button
+            className={btnClasses.btnNext}
+            onClick={handleSubmit}
+            disabled={!enableNext}
+          >
             <span>다음</span>
           </button>
         )}

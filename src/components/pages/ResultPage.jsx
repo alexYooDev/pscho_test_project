@@ -1,12 +1,12 @@
-import Result from '../test/Result';
-import classes from './page.module.css';
+import Result from "../test/Result";
+import classes from "./page.module.css";
 
 const ResultPage = () => {
   return (
     <section className={classes.wrapper}>
-      <Result/>
+      <Result />
     </section>
   );
-}
+};
 
 export default ResultPage;

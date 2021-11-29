@@ -36,26 +36,26 @@ export const questionInfo = {
 const TestContext = React.createContext({
   data: [],
   onSelect: () => {},
-  selectedVal: '',
+  selectedVal: "",
   onSetCurItems: () => {},
   curPage: 1,
   onSetCurPage: () => {},
   itemsPerPage: 5,
   isLoading: false,
-  onCheck: ()=>{},
+  onCheck: () => {},
   checked: {},
-  onSetPercent: ()=>{},
+  onSetPercent: () => {},
   percent: 0,
-  onSetProgress: ()=>{},
-  onSetAList: ()=>{},
+  onSetProgress: () => {},
+  onSetAList: () => {},
   aList: [],
   result: [],
-  progress: '',
-  onSetResult: ()=>{},
-  onSetNow: ()=>{},
+  progress: "",
+  onSetResult: () => {},
+  onSetNow: () => {},
   now: 1,
   exampleDone: 0,
-  onSetExampleDone: ()=>{},
+  onSetExampleDone: () => {},
 
   questionInfo: {
     1: "능력발휘",
@@ -67,14 +67,14 @@ const TestContext = React.createContext({
     7: "자기계발",
     8: "창의성",
   },
-  jobInfo : {
+  jobInfo: {
     1: "중졸이하",
     2: "고졸",
     3: "전문대졸",
     4: "대졸",
     5: "대학원졸",
   },
-  majorInfo : {
+  majorInfo: {
     1: "인문",
     2: "사회",
     3: "교육",
@@ -83,17 +83,16 @@ const TestContext = React.createContext({
     6: "의학",
     7: "예체능",
   },
-  onSetJobs: ()=>{},
+  onSetJobs: () => {},
   jobs: {},
-  onSetMajors: ()=>{},
-  majors: {}
+  onSetMajors: () => {},
+  majors: {},
 });
 
-export const TestContextProvider = props => {
-
+export const TestContextProvider = (props) => {
   const [result, setResult] = useState([]);
   const [qList, setQList] = useState([]);
-  const [aList, setAList] = useState(['0']);
+  const [aList, setAList] = useState(["0"]);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedVal, setSelectedVal] = useState("");
   const [exampleDone, setExampleDone] = useState(0);
@@ -105,13 +104,13 @@ export const TestContextProvider = props => {
   const [majors, setMajors] = useState([]);
   const [now, setNow] = useState(1);
   const [progress, setProgress] = useState(0);
-  
+
   const fetchQuestions = async () => {
     setIsLoading(true);
     const res = await axios.get(TEST_URL);
     const resData = await res.data.RESULT;
     const loadedData = [];
-    
+
     for (const key in resData) {
       loadedData.push({
         qitemNo: resData[key].qitemNo,
@@ -127,11 +126,11 @@ export const TestContextProvider = props => {
     setIsLoading(false);
     setQList(loadedData);
   };
-  
-  useEffect(()=>{
+
+  useEffect(() => {
     fetchQuestions();
-  },[]);
-  
+  }, []);
+
   return (
     <TestContext.Provider
       value={{
@@ -163,7 +162,7 @@ export const TestContextProvider = props => {
         onSetProgress: setProgress,
         progress: progress,
         onSetExampleDone: setExampleDone,
-        exampleDone: exampleDone
+        exampleDone: exampleDone,
       }}
     >
       {props.children}

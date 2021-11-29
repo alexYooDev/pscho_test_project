@@ -1,35 +1,34 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
 
 const ModalContext = React.createContext({
-  onSetModal: ()=>{},
+  onSetModal: () => {},
   modalIsOpen: false,
-  onSetMessage: ()=>{},
-  message: '',
-  onCloseModal: ()=>{}
+  onSetMessage: () => {},
+  message: "",
+  onCloseModal: () => {},
 });
 
-export const ModalContextProvider = props => {
+export const ModalContextProvider = (props) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [message, setMessage] = useState('');
-  
+  const [message, setMessage] = useState("");
+
   const handleCloseModal = () => {
-    setModalIsOpen(false);  
-  }
+    setModalIsOpen(false);
+  };
 
   return (
     <ModalContext.Provider
-      value = {{
+      value={{
         onSetModal: setModalIsOpen,
         modalIsOpen: modalIsOpen,
         onSetMessage: setMessage,
         message: message,
-        onCloseModal: handleCloseModal    
+        onCloseModal: handleCloseModal,
       }}
     >
       {props.children}
     </ModalContext.Provider>
   );
-
-}
+};
 
 export default ModalContext;

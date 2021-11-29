@@ -44,13 +44,22 @@ const Result = () => {
       <Card className={cardClasses.cardChart}>
         <Header>1. 직업가치관 결과</Header>
         <SubText>
-          이름: <Highlight className={txtClasses.highlight}>{usrCtx.userName}</Highlight>
+          이름:{" "}
+          <Highlight className={txtClasses.highlight}>
+            {usrCtx.userName}
+          </Highlight>
         </SubText>
         <SubText>
-          성별: <Highlight className={txtClasses.highlight}>{usrCtx.userGender}</Highlight>
+          성별:{" "}
+          <Highlight className={txtClasses.highlight}>
+            {usrCtx.userGender}
+          </Highlight>
         </SubText>
         <SubText>
-          검사일: <Highlight className={txtClasses.highlight}>{new Date().toLocaleDateString("kor")}</Highlight>
+          검사일:{" "}
+          <Highlight className={txtClasses.highlight}>
+            {new Date().toLocaleDateString("kor")}
+          </Highlight>
         </SubText>
       </Card>
       <Chart />

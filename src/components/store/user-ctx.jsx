@@ -8,7 +8,7 @@ const UserContext = React.createContext({
   isFormValid: true,
 });
 
-export const UserContextProvider = props => {
+export const UserContextProvider = (props) => {
   const [enteredName, setEnteredName] = useState("");
   const [selectedGender, setSelectedGender] = useState("");
   const [isFormValid, setIsFormValid] = useState(true);
@@ -25,12 +25,12 @@ export const UserContextProvider = props => {
         isFormValid: isFormValid,
         onSetName: setEnteredName,
         onSelectGender: setSelectedGender,
-        onSetFormValid: setIsFormValid
+        onSetFormValid: setIsFormValid,
       }}
     >
       {props.children}
     </UserContext.Provider>
   );
-}
+};
 
 export default UserContext;

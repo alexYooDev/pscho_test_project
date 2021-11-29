@@ -2,12 +2,12 @@ import { useHistory } from "react-router-dom";
 import { useContext} from "react";
 import UserContext from "../store/user-ctx";
 import ModalContext from "../store/modal-ctx";
-import Input from "../layout/ui/Input/Input";
+import Input from "../layout/ui/input/Input";
 import Highlight from "../layout/ui/text/Hightligtht";
 
 import classes from "./UserForm.module.css";
 import btnClasses from "../layout/ui/button/Button.module.css";
-import iptClasses from "../layout/ui/Input/Input.module.css";
+import iptClasses from "../layout/ui/input/Input.module.css";
 import txtClasses from '../layout/ui/text/Highlight.module.css';
 
 const UserForm = () => {
