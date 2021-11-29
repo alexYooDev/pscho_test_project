@@ -55,7 +55,7 @@ const Example = () => {
       <ProgressBar/>
       <Header>테스트에 앞서 먼저 아래 예시 문제를 보고 시도해보세요!</Header>
       <div id={ctx.data[0].id}>
-        <SubText>{ctx.data[0].question}</SubText>
+        <SubText>아래 {ctx.data[0].question}</SubText>
         <ItemNum className={itmNumClasses.itm}>{`{${ctx.data[0].qitemNo}}`}</ItemNum>
         <Button className={classes.btnAnswer} name={ctx.data[0].qitemNo} id={ctx.data[0].answer01+ctx.data[0].answerScore01} value={ctx.data[0].answerScore01} onClick={handleSelect}><ItemNum className={itmNumClasses.itmEach}>{ctx.data[0].answerScore01}. </ItemNum>{ctx.data[0].answer03}</Button>
         <Button className={classes.btnAnswer} name={ctx.data[0].qitemNo} id={ctx.data[0].answer02+ctx.data[0].answerScore02} value={ctx.data[0].answerScore02} onClick={handleSelect}><ItemNum className={itmNumClasses.itmEach}>{ctx.data[0].answerScore02}. </ItemNum>{ctx.data[0].answer04}</Button>

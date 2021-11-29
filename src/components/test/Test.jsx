@@ -37,8 +37,8 @@ const Test = (props) => {
         <div>
             <ItemNum className={itmNumClasses.itm}>{`{${item.qitemNo}}`}</ItemNum>
           <form onChange={handleCheck}>
-            <Button className={classes.btnAnswer}  name={`B${item.qitemNo}`} id={item.answer01+item.answerScore01} checked={localStorage.getItem(`B${[item.qitemNo]}`) === item.answerScore01} value={item.answerScore01}>{item.answer03}</Button>
-            <Button className={classes.btnAnswer}  name={`B${item.qitemNo}`} id={item.answer02+item.answerScore02} checked={localStorage.getItem(`B${[item.qitemNo]}`) === item.answerScore02} value={item.answerScore02}>{item.answer04}</Button>
+            <Button name={`B${item.qitemNo}`} id={item.answer01+item.answerScore01} checked={localStorage.getItem(`B${[item.qitemNo]}`) === item.answerScore01} value={item.answerScore01}>{item.answer03}</Button>
+            <Button name={`B${item.qitemNo}`} id={item.answer02+item.answerScore02} checked={localStorage.getItem(`B${[item.qitemNo]}`) === item.answerScore02} value={item.answerScore02}>{item.answer04}</Button>
           </form>
         </div>
       </Card>

@@ -72,28 +72,28 @@ const TestPage = () => {
   return (
     <Card className={cardClasses.testWrapper}>
       <ProgressBar />
-      <Header>{ctx.data[0].question}</Header>
+      <Header>각 {ctx.data[0].question}</Header>
       <Test items={curItems(ctx.data)} count={count}/>
       <Footer className={footerClasses.footer}>
         {ctx.curPage === 1 ? (
           <button className={btnClasses.btnPrev} onClick={handleToExample}>
-            <span style={{ fontWeight: "bold" }}>뒤로</span>
+            <span>뒤로</span>
           </button>
         ) : (
           <button
             className={btnClasses.btnPrev}
             onClick={handleToPrevPage}
           >
-            <span style={{ fontWeight: "bold" }}>이전</span>
+            <span>이전</span>
           </button>
         )}
         {ctx.curPage === 6 ? (
           <button className={btnClasses.btnNext} onClick={handleComplete} disabled={!enableNext}>
-            <span style={{ fontWeight: "bold" }}>종료</span>
+            <span>종료</span>
           </button>
         ) : (
           <button className={btnClasses.btnNext} onClick={handleSubmit} disabled={!enableNext}>
-            <span style={{ fontWeight: "bold" }}>다음</span>
+            <span>다음</span>
           </button>
         )}
       </Footer>
