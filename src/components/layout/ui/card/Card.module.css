@@ -8,8 +8,8 @@
   height: fit-content;
   width: 45rem;
   margin: auto;
-  margin-bottom: 2rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   display: grid;
 }
 
@@ -23,8 +23,8 @@
   height: fit-content;
   width: 40rem;
   margin: auto;
-  margin-bottom: 2rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   display: grid;
 
 }
@@ -40,8 +40,8 @@
   width: 45rem;
   margin: auto;
   padding: 0 30px 0 30px;
-  margin-bottom: 2rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   display: grid;
 }
 .cardTable {
@@ -55,8 +55,8 @@
   width: 52rem;
   margin: auto;
   padding: 0 30px 0 30px;
-  margin-bottom: 2rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   display: grid;
 }
 
@@ -70,8 +70,8 @@
   height: 25rem;
   width: 40rem;
   margin: auto;
-  margin-bottom: 2rem;
   margin-top: 10rem;
+  margin-bottom: 2rem;
   display: grid;
 }
 
@@ -85,8 +85,8 @@
   height: 29rem;
   width: 40rem;
   margin: auto;
+  margin-top: 7rem;
   margin-bottom: 2rem;
-  margin-top: 10rem;
   display: grid;
 }
 
