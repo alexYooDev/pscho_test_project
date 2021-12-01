@@ -10,12 +10,14 @@ import ItemNum from "../layout/ui/text/ItemNum";
 import classes from "../layout/ui/button/Button.module.css";
 import cardClasses from "../layout/ui/card/Card.module.css";
 import itmNumClasses from "../layout/ui/text/ItemNum.module.css";
+import txtClasses from '../layout/ui/text/Highlight.module.css';
 
 import TestContext from "../store/test-ctx";
 import ModalContext from "../store/modal-ctx";
 import { useHistory } from "react-router";
 import Header from "../layout/ui/header/Header";
 import SubText from "../layout/ui/text/SubText";
+import Highlight from "../layout/ui/text/Hightligtht";
 
 const Example = () => {
   const history = useHistory();
@@ -76,6 +78,7 @@ const Example = () => {
           {ctx.data[0].answer04}
         </Button>
       </div>
+      <Highlight className={txtClasses.highlight}>테스트는 10~15분 정도 소요됩니다.</Highlight>
       <button className={classes.btn} onClick={handleTestStart}>
         검사시작
       </button>

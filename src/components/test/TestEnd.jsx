@@ -4,7 +4,7 @@ import Card from "../layout/ui/card/Card";
 import TestContext from "../store/test-ctx";
 import UserContext from "../store/user-ctx";
 import SubText from "../layout/ui/text/SubText";
-import { API_KEY, CAT_NUM } from "../data-src/data-src";
+import { API_KEY, CAT_NUM, MAN, RESULT_URL, TRGET_SEQ, WOMAN } from "../data-src/data-src";
 
 import btnClasses from "../layout/ui/button/Button.module.css";
 import cardClasses from "../layout/ui/card/Card.module.css";
@@ -14,8 +14,6 @@ import axios from "axios";
 import Header from "../layout/ui/header/Header";
 import Loading from "../loading/Loading";
 import Highlight from "../layout/ui/text/Hightligtht";
-
-const RESULT_URL = `https://www.career.go.kr/inspct/openapi/test/report?apikey=${API_KEY}&qestrnSeq=${CAT_NUM}`;
 
 const TestEnd = () => {
   const history = useHistory();
@@ -31,10 +29,10 @@ const TestEnd = () => {
   useEffect(() => {
     const params = {
       apikey: API_KEY,
-      qestrnSeq: "6",
-      trgetSe: "100209",
+      qestrnSeq: CAT_NUM,
+      trgetSe: TRGET_SEQ,
       name: usrCtx.userName,
-      gender: usrCtx.userGender === "남자" ? "100323" : "100324",
+      gender: usrCtx.userGender === "남자" ? MAN : WOMAN,
       startDtm: new Date().getTime(),
       answers: Object.entries(ctx.aList)
         .map((item) => {
