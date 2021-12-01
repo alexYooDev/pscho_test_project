@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { CAT_NUM, API_KEY } from "../data-src/data-src";
 import axios from "axios";
 
-const KEY = "a72cbf8ac59de7c7968bd99e69950998";
-const TEST_CAT_NUM = "6";
-const TEST_URL = `https://www.career.go.kr/inspct/openapi/test/questions?apikey=${KEY}&q=${TEST_CAT_NUM}`;
+const TEST_URL = `https://www.career.go.kr/inspct/openapi/test/questions?apikey=${API_KEY}&q=${CAT_NUM}`;
 
 export const jobInfo = {
   1: "중졸이하",

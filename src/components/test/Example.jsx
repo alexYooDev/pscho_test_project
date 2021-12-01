@@ -6,12 +6,10 @@ import ProgressBar from "../layout/ui/progressBar/ProgressBar";
 import Backdrop from "../modal/Backdrop";
 import Modal from "../modal/Modal";
 import ItemNum from "../layout/ui/text/ItemNum";
-import Highlight from "../layout/ui/text/Hightligtht";
 
 import classes from "../layout/ui/button/Button.module.css";
 import cardClasses from "../layout/ui/card/Card.module.css";
 import itmNumClasses from "../layout/ui/text/ItemNum.module.css";
-import txtClasses from "../layout/ui/text/Highlight.module.css";
 
 import TestContext from "../store/test-ctx";
 import ModalContext from "../store/modal-ctx";
