@@ -23,7 +23,7 @@
   width: 30rem;
   z-index: 10;
   position: fixed;
-  top: 20vh;
+  top: 40vh;
   left: 50%;
   transform: translate(-50%, -50%);
 }

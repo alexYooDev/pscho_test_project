@@ -105,7 +105,8 @@ const TestEnd = () => {
             <Highlight className={txtClasses.highlight}>
               {ctx.questionInfo[ctx.result[1].num]}
             </Highlight>
-            를(을) 가장 중요하게 생각합니다. 반면{" "}
+            를(을) 가장 중요하게 생각합니다.
+            <br /> 반면,{" "}
             <Highlight className={txtClasses.highlight}>
               {ctx.questionInfo[ctx.result[ctx.result.length - 1].num]}
             </Highlight>
