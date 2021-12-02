@@ -110,7 +110,7 @@ const TestEnd = () => {
             <Highlight className={txtClasses.highlight}>
               {ctx.questionInfo[ctx.result[ctx.result.length - 2].num]}
             </Highlight>
-            를(을) 상대적을 덜 중요하게 생각합니다.
+            를(을) 상대적으로 덜 중요하게 생각합니다.
           </SubText>
           <Header>최적 직업 Top 5</Header>
           <ol style={{ padding: 0 }}>
