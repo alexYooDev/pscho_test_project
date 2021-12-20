@@ -1,8 +1,29 @@
 # 개인 프론트엔드 웹개발 프로젝트 [커리어 밸런스 게임: 직업심리검사테스트]
 
-[커리어 밸런스 게임](http://elice-kdt-3rd-vm-085.koreacentral.cloudapp.azure.com/)
+[링크: 커리어 밸런스 게임](http://elice-kdt-3rd-vm-085.koreacentral.cloudapp.azure.com/)
 
-## 웹 환경
+## 개발자 소개
+
+자바스크립트 개발의 근본과 탄탄한 기본기를 추구하는 유환익 프론트엔드 레이서
+
+## 기술 스택
+
+### 주요 기술
+- React.js
+- Css Module (스타일)
+- Context API (상태값 관리)
+
+### 라이브러리
+- React Router Dom (라우팅)
+- React Responsive (useMediaQuery: 반응형 UI)
+- Axios (API 통신)
+- Recharts (차트 컴포넌트)
+
+### 배포 환경
+- Ubuntu
+- nginx
+
+## 시연: 웹 환경
 
 ### 유저 정보 입력 페이지
 
@@ -102,7 +123,7 @@
 
 ---
 
-## 반응형 전환
+## 시연: 반응형 전환
 
 ### 모바일 유저 정보 입력
 
@@ -132,11 +153,6 @@
 ### 모바일 결과 페이지 상단
 
 <img src="./photo/19.png" width="700">
-<br>
-
-### 모바일 결과 페이지 중단
-
-<img src="./photo/20.png" width="700">
 <br>
 
 ### 모바일 결과 페이지 하단
