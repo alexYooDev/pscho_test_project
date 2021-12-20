@@ -12,6 +12,8 @@
 **라이브러리**
 - React Router Dom
 - React Responsive (useMediaQuery: 반응형 UI)
+- Axios (API 통신)
+- Recharts (차트 컴포넌트)
 
 ## 시연: 웹 환경
 
