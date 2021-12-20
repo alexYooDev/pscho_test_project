@@ -1,6 +1,6 @@
 # 개인 프론트엔드 웹개발 프로젝트 [커리어 밸런스 게임: 직업심리검사테스트]
 
-[커리어 밸런스 게임](http://elice-kdt-3rd-vm-085.koreacentral.cloudapp.azure.com/)
+[링크: 커리어 밸런스 게임](http://elice-kdt-3rd-vm-085.koreacentral.cloudapp.azure.com/)
 
 ## 개발자 소개
 
@@ -18,6 +18,10 @@
 - React Responsive (useMediaQuery: 반응형 UI)
 - Axios (API 통신)
 - Recharts (차트 컴포넌트)
+
+## 배포 환경
+- Ubuntu
+- nginx
 
 ## 시연: 웹 환경
 
