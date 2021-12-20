@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TEST_URL } from '/Users/alexyoodev/alexDevDir/fst-project/alex/src/components/data-src/data-src';
+import { TEST_URL } from '../data-src/data-src';
 import axios from 'axios';
 
 export const jobInfo = {
