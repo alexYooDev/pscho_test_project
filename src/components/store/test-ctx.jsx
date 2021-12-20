@@ -1,39 +1,39 @@
-import React, { useState, useEffect } from "react";
-import { TEST_URL } from "../data-src/data-src";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import { TEST_URL } from '/Users/alexyoodev/alexDevDir/fst-project/alex/src/components/data-src/data-src';
+import axios from 'axios';
 
 export const jobInfo = {
-  1: "중졸이하",
-  2: "고졸",
-  3: "전문대졸",
-  4: "대졸",
-  5: "대학원졸",
+  1: '중졸이하',
+  2: '고졸',
+  3: '전문대졸',
+  4: '대졸',
+  5: '대학원졸',
 };
 
 export const majorInfo = {
-  1: "인문",
-  2: "사회",
-  3: "교육",
-  4: "공학",
-  5: "자연",
-  6: "의학",
-  7: "예체능",
+  1: '인문',
+  2: '사회',
+  3: '교육',
+  4: '공학',
+  5: '자연',
+  6: '의학',
+  7: '예체능',
 };
 export const questionInfo = {
-  1: "능력발휘",
-  2: "자율성",
-  3: "보수",
-  4: "안정성",
-  5: "사회적 인정",
-  6: "사회봉사",
-  7: "자기계발",
-  8: "창의성",
+  1: '능력발휘',
+  2: '자율성',
+  3: '보수',
+  4: '안정성',
+  5: '사회적 인정',
+  6: '사회봉사',
+  7: '자기계발',
+  8: '창의성',
 };
 
 const TestContext = React.createContext({
   data: [],
   onSelect: () => {},
-  selectedVal: "",
+  selectedVal: '',
   onSetCurItems: () => {},
   curPage: 1,
   onSetCurPage: () => {},
@@ -47,7 +47,7 @@ const TestContext = React.createContext({
   onSetAList: () => {},
   aList: [],
   result: [],
-  progress: "",
+  progress: '',
   onSetResult: () => {},
   onSetNow: () => {},
   now: 1,
@@ -55,30 +55,30 @@ const TestContext = React.createContext({
   onSetExampleDone: () => {},
 
   questionInfo: {
-    1: "능력발휘",
-    2: "자율성",
-    3: "보수",
-    4: "안정성",
-    5: "사회적 인정",
-    6: "사회봉사",
-    7: "자기계발",
-    8: "창의성",
+    1: '능력발휘',
+    2: '자율성',
+    3: '보수',
+    4: '안정성',
+    5: '사회적 인정',
+    6: '사회봉사',
+    7: '자기계발',
+    8: '창의성',
   },
   jobInfo: {
-    1: "중졸이하",
-    2: "고졸",
-    3: "전문대졸",
-    4: "대졸",
-    5: "대학원졸",
+    1: '중졸이하',
+    2: '고졸',
+    3: '전문대졸',
+    4: '대졸',
+    5: '대학원졸',
   },
   majorInfo: {
-    1: "인문",
-    2: "사회",
-    3: "교육",
-    4: "공학",
-    5: "자연",
-    6: "의학",
-    7: "예체능",
+    1: '인문',
+    2: '사회',
+    3: '교육',
+    4: '공학',
+    5: '자연',
+    6: '의학',
+    7: '예체능',
   },
   onSetJobs: () => {},
   jobs: {},
@@ -89,9 +89,9 @@ const TestContext = React.createContext({
 export const TestContextProvider = (props) => {
   const [result, setResult] = useState([]);
   const [qList, setQList] = useState([]);
-  const [aList, setAList] = useState(["0"]);
+  const [aList, setAList] = useState(['0']);
   const [isLoading, setIsLoading] = useState(false);
-  const [selectedVal, setSelectedVal] = useState("");
+  const [selectedVal, setSelectedVal] = useState('');
   const [exampleDone, setExampleDone] = useState(0);
   const [percent, setPercent] = useState(0);
   const [curPage, setCurPage] = useState(1);
