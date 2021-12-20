@@ -6,4 +6,8 @@
 # 정보 입력 포맷 틀릴 시
 ![유저 정보 입력 실패](./photo/2.png)
 
+# 정보 정상 입력 시 버튼 활성화
+![유저 정보 정상 입력](./photo/2_1.png)
+
+
 [커리어 밸런스 게임](http://elice-kdt-3rd-vm-085.koreacentral.cloudapp.azure.com/)
