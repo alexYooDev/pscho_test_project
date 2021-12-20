@@ -5,10 +5,10 @@
 ## 웹 환경
 
 ### 유저 정보 입력 페이지
-![유저 정보 입력 페이지](./photo/1.png){: width="300" height="300"){: .center}
+<img src="./photo/1.png  width="300" height="300"/>
 - 유저의 정보 입력
 ### 정보 입력 포맷 틀릴 시
-![유저 정보 입력 실패](./photo/2.png){: width="300" height="300"){: .center}
+<img src="./photo/2.png  width="300" height="300"/>
 
 ### 정보 정상 입력 시 버튼 활성화
 ![유저 정보 정상 입력](./photo/2_1.png){: width="300" height="300"){: .center}
