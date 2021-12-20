@@ -8,12 +8,12 @@
 
 ## 기술 스택
 
-**주요 기술**
+### 주요 기술
 - React.js
 - Css Module (스타일)
 - Context API (상태값 관리)
 
-**라이브러리**
+### 라이브러리
 - React Router Dom (라우팅)
 - React Responsive (useMediaQuery: 반응형 UI)
 - Axios (API 통신)
