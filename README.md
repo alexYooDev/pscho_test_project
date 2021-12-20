@@ -19,7 +19,7 @@
 - Axios (API 통신)
 - Recharts (차트 컴포넌트)
 
-## 배포 환경
+### 배포 환경
 - Ubuntu
 - nginx
 
