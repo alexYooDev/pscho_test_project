@@ -2,6 +2,10 @@
 
 [커리어 밸런스 게임](http://elice-kdt-3rd-vm-085.koreacentral.cloudapp.azure.com/)
 
+## 개발자 소개
+
+자바스크립트 개발의 근본과 탄탄한 기본기를 추구하는 유환익 프론트엔드 레이서
+
 ## 기술 스택
 
 **주요 기술**
@@ -10,7 +14,7 @@
 - Context API (상태값 관리)
 
 **라이브러리**
-- React Router Dom
+- React Router Dom (라우팅)
 - React Responsive (useMediaQuery: 반응형 UI)
 - Axios (API 통신)
 - Recharts (차트 컴포넌트)
