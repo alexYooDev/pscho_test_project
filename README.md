@@ -2,7 +2,17 @@
 
 [커리어 밸런스 게임](http://elice-kdt-3rd-vm-085.koreacentral.cloudapp.azure.com/)
 
-## 웹 환경
+## 기술 스택
+
+**주요 기술**
+- React.js
+- Css Module (스타일)
+- Context API (상태값 관리)
+**라이브러리**
+- React Router Dom
+- React Responsive (useMediaQuery: 반응형 UI)
+
+## 시연: 웹 환경
 
 ### 유저 정보 입력 페이지
 
@@ -102,7 +112,7 @@
 
 ---
 
-## 반응형 전환
+## 시연: 반응형 전환
 
 ### 모바일 유저 정보 입력
 
