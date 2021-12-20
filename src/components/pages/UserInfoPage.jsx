@@ -1,19 +1,18 @@
-import { useContext } from "react";
+import { useContext } from 'react';
+import UserForm from '../user/UserForm';
+import Modal from '../modal/Modal';
+import Backdrop from '../modal/Backdrop';
+import ModalContext from '../store/modal-ctx';
+import Header from '../layout/ui/header/Header';
+import Card from '../layout/ui/card/Card';
 
-import UserForm from "../user/UserForm";
-import Modal from "../modal/Modal";
-import Backdrop from "../modal/Backdrop";
-import ModalContext from "../store/modal-ctx";
-import Header from "../layout/ui/header/Header";
-import Card from "../layout/ui/card/Card";
-
-import cardClasses from "../layout/ui/card/Card.module.css";
+import cardClasses from '../layout/ui/card/Card.module.css';
 
 const UserInfoPage = () => {
   const modalCtx = useContext(ModalContext);
 
   return (
-    <Card className={cardClasses.cardUser}>
+    <Card className={cardClasses.cardUser} style={{ width: '22rem' }}>
       <Header>직업 가치관 검사</Header>
       <UserForm
         onSetMessage={modalCtx.onSetMessage}

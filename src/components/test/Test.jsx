@@ -1,12 +1,12 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect } from 'react';
 
-import Card from "../layout/ui/card/Card";
-import Button from "../layout/ui/button/Button";
-import TestContext from "../store/test-ctx";
+import Card from '../layout/ui/card/Card';
+import Button from '../layout/ui/button/Button';
+import TestContext from '../store/test-ctx';
 
-import itmNumClasses from "../layout/ui/text/ItemNum.module.css";
-import cardClasses from "../layout/ui/card/Card.module.css";
-import ItemNum from "../layout/ui/text/ItemNum";
+import itmNumClasses from '../layout/ui/text/ItemNum.module.css';
+import cardClasses from '../layout/ui/card/Card.module.css';
+import ItemNum from '../layout/ui/text/ItemNum';
 
 const Test = (props) => {
   const ctx = useContext(TestContext);
@@ -29,7 +29,11 @@ const Test = (props) => {
   return (
     <>
       {props.items.map((item) => (
-        <Card key={item.qitemNo} className={cardClasses.cardTest}>
+        <Card
+          key={item.qitemNo}
+          className={cardClasses.cardTest}
+          style={{ width: '18rem' }}
+        >
           <div>
             <ItemNum
               className={itmNumClasses.itm}

@@ -1,6 +1,8 @@
-import { useState } from "react";
-import { css } from "@emotion/react";
-import BounceLoader from "react-spinners/BounceLoader";
+import { useState } from 'react';
+import { css } from '@emotion/react';
+import BounceLoader from 'react-spinners/BounceLoader';
+import { Mobile } from '../layout/viewport/Mobile';
+import { Desktop } from '../layout/viewport/Desktop';
 
 const override = css`
   display: fixed;
@@ -22,11 +24,26 @@ const override = css`
 
 const Loading = () => {
   let [loading, setLoading] = useState(true);
-  let [color, setColor] = useState("#ffffff");
+  let [color, setColor] = useState('#ffffff');
 
   return (
-    <div className="sweet-loading">
-      <BounceLoader color={color} loading={loading} css={override} size={250} />
+    <div className='sweet-loading'>
+      <Mobile>
+        <BounceLoader
+          color={color}
+          loading={loading}
+          css={override}
+          size={100}
+        />
+      </Mobile>
+      <Desktop>
+        <BounceLoader
+          color={color}
+          loading={loading}
+          css={override}
+          size={250}
+        />
+      </Desktop>
     </div>
   );
 };

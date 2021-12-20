@@ -120,7 +120,7 @@
  .radioBtn input[type="radio"]:hover + span {
    transition: ease-in 185ms;
    background-color: #0d2d31;
-   border-color: wheat;
+   border-color: whear;
    color:darkgray;
  }
 

@@ -1,21 +1,23 @@
-import { useContext, useEffect, useState } from "react";
-import { useHistory } from "react-router";
+import { useContext, useEffect, useState } from 'react';
+import { useHistory } from 'react-router';
+import { Mobile } from '../layout/viewport/Mobile';
+import { Desktop } from '../layout/viewport/Desktop';
 
-import Test from "../test/Test";
-import ProgressBar from "../layout/ui/progressBar/ProgressBar";
-import Header from "../layout/ui/header/Header";
-import Footer from "../layout/ui/footer/Footer";
-import Loading from "../loading/Loading";
-import Modal from "../modal/Modal";
-import Backdrop from "../modal/Backdrop";
-import Card from "../layout/ui/card/Card";
+import Test from '../test/Test';
+import ProgressBar from '../layout/ui/progressBar/ProgressBar';
+import Header from '../layout/ui/header/Header';
+import Footer from '../layout/ui/footer/Footer';
+import Loading from '../loading/Loading';
+import Modal from '../modal/Modal';
+import Backdrop from '../modal/Backdrop';
+import Card from '../layout/ui/card/Card';
 
-import ModalContext from "../store/modal-ctx";
-import TestContext from "../store/test-ctx";
+import ModalContext from '../store/modal-ctx';
+import TestContext from '../store/test-ctx';
 
-import cardClasses from "../layout/ui/card/Card.module.css";
-import footerClasses from "../layout/ui/footer/Footer.module.css";
-import btnClasses from "../layout/ui/button/Button.module.css";
+import cardClasses from '../layout/ui/card/Card.module.css';
+import footerClasses from '../layout/ui/footer/Footer.module.css';
+import btnClasses from '../layout/ui/button/Button.module.css';
 
 const TestPage = () => {
   const history = useHistory();
@@ -29,8 +31,8 @@ const TestPage = () => {
   };
 
   const handleToPrevPage = () => {
-    ctx.onSetCurPage(ctx.curPage - 1);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    ctx.onSetCurPage((curPage) => curPage + 1);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   let checkedArr = Object.entries(ctx.checked);
@@ -51,12 +53,12 @@ const TestPage = () => {
     ctx.onSetNow((prev) => {
       return prev + 1;
     });
-    ctx.onSetCurPage(ctx.curPage + 1);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    ctx.onSetCurPage((prevPage) => prevPage + 1);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleComplete = () => {
-    history.push("/test-end");
+    history.push('/test-end');
     ctx.onSetAList(ctx.checked);
   };
 
@@ -69,37 +71,77 @@ const TestPage = () => {
   }
 
   return (
-    <Card className={cardClasses.testWrapper}>
+    <Card className={cardClasses.testWrapper} style={{ width: '20rem' }}>
       <ProgressBar />
-      <Header>각 {ctx.data[0].question}</Header>
+      <Header style={{ fontSize: '1.1rem' }}>각 {ctx.data[0].question}</Header>
       <Test items={curItems(ctx.data)} count={count} />
       <Footer className={footerClasses.footer}>
-        {ctx.curPage === 1 ? (
-          <button className={btnClasses.btnPrev} onClick={handleToExample}>
-            <span>뒤로</span>
-          </button>
-        ) : (
-          <button className={btnClasses.btnPrev} onClick={handleToPrevPage}>
-            <span>이전</span>
-          </button>
-        )}
-        {ctx.curPage === 6 ? (
-          <button
-            className={btnClasses.btnNext}
-            onClick={handleComplete}
-            disabled={!enableNext}
-          >
-            <span>종료</span>
-          </button>
-        ) : (
-          <button
-            className={btnClasses.btnNext}
-            onClick={handleSubmit}
-            disabled={!enableNext}
-          >
-            <span>다음</span>
-          </button>
-        )}
+        <Mobile>
+          {ctx.curPage === 1 ? (
+            <button
+              className={btnClasses.btnPrev}
+              onClick={handleToExample}
+              style={{ width: '5rem', padding: '0.75rem 1rem' }}
+            >
+              <span>뒤로</span>
+            </button>
+          ) : (
+            <button
+              className={btnClasses.btnPrev}
+              onClick={handleToPrevPage}
+              style={{ width: '5rem', padding: '0.75rem 1rem' }}
+            >
+              <span>이전</span>
+            </button>
+          )}
+          {ctx.curPage === 6 ? (
+            <button
+              className={btnClasses.btnNext}
+              onClick={handleComplete}
+              disabled={!enableNext}
+              style={{ width: '5rem', padding: '0.75rem 1rem' }}
+            >
+              <span>종료</span>
+            </button>
+          ) : (
+            <button
+              className={btnClasses.btnNext}
+              onClick={handleSubmit}
+              disabled={!enableNext}
+              style={{ width: '5rem', padding: '0.75rem 1rem' }}
+            >
+              <span>다음</span>
+            </button>
+          )}
+        </Mobile>
+        <Desktop>
+          {ctx.curPage === 1 ? (
+            <button className={btnClasses.btnPrev} onClick={handleToExample}>
+              <span>뒤로</span>
+            </button>
+          ) : (
+            <button className={btnClasses.btnPrev} onClick={handleToPrevPage}>
+              <span>이전</span>
+            </button>
+          )}
+          {ctx.curPage === 6 ? (
+            <button
+              className={btnClasses.btnNext}
+              onClick={handleComplete}
+              disabled={!enableNext}
+            >
+              <span>종료</span>
+            </button>
+          ) : (
+            <button
+              className={btnClasses.btnNext}
+              onClick={handleSubmit}
+              disabled={!enableNext}
+            >
+              <span>다음</span>
+            </button>
+          )}
+        </Desktop>
       </Footer>
       {modalCtx.modalIsOpen && (
         <Backdrop

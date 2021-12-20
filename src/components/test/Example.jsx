@@ -1,23 +1,23 @@
-import React, { useContext } from "react";
-import Card from "../layout/ui/card/Card";
-import Button from "../layout/ui/button/Button";
-import Loading from "../loading/Loading";
-import ProgressBar from "../layout/ui/progressBar/ProgressBar";
-import Backdrop from "../modal/Backdrop";
-import Modal from "../modal/Modal";
-import ItemNum from "../layout/ui/text/ItemNum";
+import React, { useContext } from 'react';
+import Card from '../layout/ui/card/Card';
+import Button from '../layout/ui/button/Button';
+import Loading from '../loading/Loading';
+import ProgressBar from '../layout/ui/progressBar/ProgressBar';
+import Backdrop from '../modal/Backdrop';
+import Modal from '../modal/Modal';
+import ItemNum from '../layout/ui/text/ItemNum';
 
-import classes from "../layout/ui/button/Button.module.css";
-import cardClasses from "../layout/ui/card/Card.module.css";
-import itmNumClasses from "../layout/ui/text/ItemNum.module.css";
+import classes from '../layout/ui/button/Button.module.css';
+import cardClasses from '../layout/ui/card/Card.module.css';
+import itmNumClasses from '../layout/ui/text/ItemNum.module.css';
 import txtClasses from '../layout/ui/text/Highlight.module.css';
 
-import TestContext from "../store/test-ctx";
-import ModalContext from "../store/modal-ctx";
-import { useHistory } from "react-router";
-import Header from "../layout/ui/header/Header";
-import SubText from "../layout/ui/text/SubText";
-import Highlight from "../layout/ui/text/Hightligtht";
+import TestContext from '../store/test-ctx';
+import ModalContext from '../store/modal-ctx';
+import { useHistory } from 'react-router';
+import Header from '../layout/ui/header/Header';
+import SubText from '../layout/ui/text/SubText';
+import Highlight from '../layout/ui/text/Hightligtht';
 
 const Example = () => {
   const history = useHistory();
@@ -32,11 +32,11 @@ const Example = () => {
 
   const handleTestStart = (e) => {
     if (ctx.exampleDone === 0) {
-      modalCtx.onSetMessage("예제를 완료해주세요!");
+      modalCtx.onSetMessage('예제를 완료해주세요!');
       modalCtx.onSetModal(true);
     } else {
       localStorage.clear();
-      history.push("/test");
+      history.push('/test');
     }
   };
 
@@ -45,7 +45,10 @@ const Example = () => {
   }
 
   return (
-    <Card className={cardClasses.cardExample}>
+    <Card
+      className={cardClasses.cardExample}
+      style={{ width: '22rem', height: '33rem', padding: '2rem' }}
+    >
       <ProgressBar />
       <Header>테스트에 앞서 먼저 아래 예시 문제를 보고 시도해보세요!</Header>
       <div id={ctx.data[0].id}>
@@ -61,7 +64,7 @@ const Example = () => {
           onClick={handleSelect}
         >
           <ItemNum className={itmNumClasses.itmEach}>
-            {ctx.data[0].answerScore01}.{" "}
+            {ctx.data[0].answerScore01}.{' '}
           </ItemNum>
           {ctx.data[0].answer03}
         </Button>
@@ -73,12 +76,14 @@ const Example = () => {
           onClick={handleSelect}
         >
           <ItemNum className={itmNumClasses.itmEach}>
-            {ctx.data[0].answerScore02}.{" "}
+            {ctx.data[0].answerScore02}.{' '}
           </ItemNum>
           {ctx.data[0].answer04}
         </Button>
       </div>
-      <Highlight className={txtClasses.highlight}>테스트는 10~15분 정도 소요됩니다.</Highlight>
+      <Highlight className={txtClasses.highlight}>
+        테스트는 10~15분 정도 소요됩니다.
+      </Highlight>
       <button className={classes.btn} onClick={handleTestStart}>
         검사시작
       </button>

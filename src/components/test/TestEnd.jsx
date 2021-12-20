@@ -1,19 +1,26 @@
-import React, { useContext, useEffect, useState } from "react";
-import { useHistory } from "react-router";
-import Card from "../layout/ui/card/Card";
-import TestContext from "../store/test-ctx";
-import UserContext from "../store/user-ctx";
-import SubText from "../layout/ui/text/SubText";
-import { API_KEY, CAT_NUM, MAN, RESULT_URL, TRGET_SEQ, WOMAN } from "../data-src/data-src";
+import React, { useContext, useEffect, useState } from 'react';
+import { useHistory } from 'react-router';
+import Card from '../layout/ui/card/Card';
+import TestContext from '../store/test-ctx';
+import UserContext from '../store/user-ctx';
+import SubText from '../layout/ui/text/SubText';
+import {
+  API_KEY,
+  CAT_NUM,
+  MAN,
+  RESULT_URL,
+  TRGET_SEQ,
+  WOMAN,
+} from '../data-src/data-src';
 
-import btnClasses from "../layout/ui/button/Button.module.css";
-import cardClasses from "../layout/ui/card/Card.module.css";
-import txtClasses from "../layout/ui/text/Highlight.module.css";
+import btnClasses from '../layout/ui/button/Button.module.css';
+import cardClasses from '../layout/ui/card/Card.module.css';
+import txtClasses from '../layout/ui/text/Highlight.module.css';
 
-import axios from "axios";
-import Header from "../layout/ui/header/Header";
-import Loading from "../loading/Loading";
-import Highlight from "../layout/ui/text/Hightligtht";
+import axios from 'axios';
+import Header from '../layout/ui/header/Header';
+import Loading from '../loading/Loading';
+import Highlight from '../layout/ui/text/Hightligtht';
 
 const TestEnd = () => {
   const history = useHistory();
@@ -23,7 +30,7 @@ const TestEnd = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const cors = axios.create({
-    headers: { "Content-Type": "application/json" },
+    headers: { 'Content-Type': 'application/json' },
   });
 
   useEffect(() => {
@@ -32,23 +39,23 @@ const TestEnd = () => {
       qestrnSeq: CAT_NUM,
       trgetSe: TRGET_SEQ,
       name: usrCtx.userName,
-      gender: usrCtx.userGender === "남자" ? MAN : WOMAN,
+      gender: usrCtx.userGender === '남자' ? MAN : WOMAN,
       startDtm: new Date().getTime(),
       answers: Object.entries(ctx.aList)
         .map((item) => {
-          return item.join("=");
+          return item.join('=');
         })
-        .join(" "),
+        .join(' '),
     };
     (async () => {
       const res = await cors.post(RESULT_URL, params);
-      const seq = res.data.RESULT["url"].split("seq=")[1];
+      const seq = res.data.RESULT['url'].split('seq=')[1];
       const secRes = await axios.get(
-        "https://www.career.go.kr/inspct/api/psycho/report?seq=" + seq
+        'https://www.career.go.kr/inspct/api/psycho/report?seq=' + seq
       );
-      const wonScore = secRes.data.result.wonScore.split(" ").filter((x) => x);
+      const wonScore = secRes.data.result.wonScore.split(' ').filter((x) => x);
       const resultArr = wonScore.map((item) => {
-        const data = item.split("=");
+        const data = item.split('=');
         return { num: data[0], score: parseInt(data[1]) };
       });
       resultArr.sort((a, b) => {
@@ -78,7 +85,7 @@ const TestEnd = () => {
   }, []);
 
   const handleMoveToResult = () => {
-    history.push("/result");
+    history.push('/result');
   };
 
   return (
@@ -86,27 +93,30 @@ const TestEnd = () => {
       {!isLoading ? (
         <Loading />
       ) : (
-        <Card className={cardClasses.cardUser}>
+        <Card
+          className={cardClasses.cardUser}
+          style={{ width: '22rem', height: '27rem' }}
+        >
           <Header>검사가 완료되었습니다.</Header>
           <SubText>
-            직업생활과 관련하여{" "}
+            직업생활과 관련하여{' '}
             <Highlight className={txtClasses.highlight}>
               {usrCtx.userName}
             </Highlight>
-            님은{" "}
+            님은{' '}
             <Highlight className={txtClasses.highlight}>
               {ctx.questionInfo[ctx.result[0].num]}
             </Highlight>
-            과(와){" "}
+            과(와){' '}
             <Highlight className={txtClasses.highlight}>
               {ctx.questionInfo[ctx.result[1].num]}
             </Highlight>
             를(을) 가장 중요하게 생각합니다.
-            <br /> 반면,{" "}
+            <br /> 반면,{' '}
             <Highlight className={txtClasses.highlight}>
               {ctx.questionInfo[ctx.result[ctx.result.length - 1].num]}
             </Highlight>
-            과(와){" "}
+            과(와){' '}
             <Highlight className={txtClasses.highlight}>
               {ctx.questionInfo[ctx.result[ctx.result.length - 2].num]}
             </Highlight>
@@ -143,6 +153,7 @@ const TestEnd = () => {
           <button
             className={btnClasses.btnTestEnd}
             onClick={handleMoveToResult}
+            style={{ width: '10rem', padding: '0.5rem 1rem' }}
           >
             결과 보기
           </button>
