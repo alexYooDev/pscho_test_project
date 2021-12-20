@@ -5,12 +5,12 @@
 ## 웹 환경
 
 ### 유저 정보 입력 페이지
-<img src="./photo/1.png" width="500" height="500">
+<img src="./photo/1.png" width="700" height="500">
 - 유저의 정보 입력
 <br>
 
 ### 정보 입력 포맷 틀릴 시
-<img src="./photo/2.png" width="500" height="500">
+<img src="./photo/2.png" width="700" height="500">
 <br>
 
 ### 정보 정상 입력 시 버튼 활성화
