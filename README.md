@@ -151,11 +151,6 @@
 <img src="./photo/19.png" width="700">
 <br>
 
-### 모바일 결과 페이지 중단
-
-<img src="./photo/20.png" width="700">
-<br>
-
 ### 모바일 결과 페이지 하단
 
 <img src="./photo/21.png" width="700">
