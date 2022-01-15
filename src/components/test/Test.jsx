@@ -11,6 +11,7 @@ import ItemNum from '../layout/ui/text/ItemNum';
 const Test = (props) => {
   const ctx = useContext(TestContext);
 
+  /* 문항을 체크하면 스테이트 배열에 저장합니다. */
   const handleCheck = (e) => {
     ctx.onCheck({
       ...ctx.checked,
