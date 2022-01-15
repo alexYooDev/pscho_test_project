@@ -1,6 +1,6 @@
 import classes from './Input.module.css';
 
-export const Input = (props) => {
+const Input = (props) => {
   return (
     <div className={classes.control}>
       <input
@@ -20,3 +20,5 @@ export const Input = (props) => {
     </div>
   );
 };
+
+export default Input;
