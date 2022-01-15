@@ -1,4 +1,4 @@
-import classes from "./Input.module.css";
+import classes from './Input.module.css';
 
 const Input = (props) => {
   return (
@@ -8,14 +8,14 @@ const Input = (props) => {
         type={props.type}
         value={props.value}
         name={props.name}
-        autoComplete="off"
+        autoComplete='off'
         onChange={props.onChange}
         onClick={props.onClick}
       />
-      {props.type === "radio" ? (
+      {props.type === 'radio' ? (
         <label htmlFor={props.name}>{props.value}</label>
       ) : (
-        ""
+        ''
       )}
     </div>
   );
