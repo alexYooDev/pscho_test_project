@@ -11,7 +11,7 @@ import {
   RESULT_URL,
   TRGET_SEQ,
   WOMAN,
-} from '../data-src/data-src';
+} from '../data-src/dataSrc';
 
 import btnClasses from '../layout/ui/button/Button.module.css';
 import cardClasses from '../layout/ui/card/Card.module.css';
