@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import UserContext from '../store/user-ctx';
 import ModalContext from '../store/modal-ctx';
 import Highlight from '../layout/ui/text/Hightligtht';
-import UserInput from '../layout/ui/input/UserInput.component';
+import UserInput from '../layout/ui/input/UserInput.component.jsx';
 
 import classes from './UserForm.module.css';
 import btnClasses from '../layout/ui/button/Button.module.css';
