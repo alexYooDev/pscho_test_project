@@ -1,0 +1,26 @@
+
+.control label {
+  font-weight: bold;
+  color: #2e8489;
+  margin-bottom: 0.5rem;
+}
+
+.control input {
+  font: inherit;
+  color: wheat;
+  background: darkslategray;
+  padding: 0.35rem 0.35rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.control input:focus {
+  outline: none;
+  border-color: darkslategray;
+  background: #2e8489;
+}
+
+.control .invalid input{
+  border-color: red;
+  background: #fbdada;
+}
