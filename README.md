@@ -2,7 +2,7 @@
 (개인 프론트엔드 웹개발 프로젝트) 
 [career valance game: job aptitude && psychologicy test]
 
-[링크: Career Balance Game](https://psycho-test-project.vercel.app/)
+[Link: Career Balance Game](https://psycho-test-project.vercel.app/)
 
 ## About the Creator (개발자 소개)
 Hwanik Alexander Yoo (Front-end Developer)
