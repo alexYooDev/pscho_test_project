@@ -1,4 +1,6 @@
-# Individual Web Front-end Development Project (개인 프론트엔드 웹개발 프로젝트) [career valance game: job aptitude && psychologicy test]
+# Individual Web Front-end Development Project 
+(개인 프론트엔드 웹개발 프로젝트) 
+[career valance game: job aptitude && psychologicy test]
 
 [링크: Career Balance Game](https://psycho-test-project.vercel.app/)
 
